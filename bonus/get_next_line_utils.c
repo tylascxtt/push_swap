@@ -6,12 +6,13 @@
 /*   By: mabenaya <mabenaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 14:54:53 by mabenaya          #+#    #+#             */
-/*   Updated: 2026/01/16 17:14:14 by mabenaya         ###   ########.fr       */
+/*   Updated: 2026/01/17 15:51:36 by mabenaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include <stdlib.h>
+#include "checker.h"
 
 size_t	ft_strlen_gnl(const char *s)
 {

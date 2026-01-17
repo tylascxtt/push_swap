@@ -6,15 +6,13 @@
 /*   By: mabenaya <mabenaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 23:36:43 by mabenaya          #+#    #+#             */
-/*   Updated: 2026/01/16 17:14:19 by mabenaya         ###   ########.fr       */
+/*   Updated: 2026/01/17 15:56:44 by mabenaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fcntl.h>
 #include <limits.h>
-#include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include <unistd.h>
 
 #ifndef BUFFER_SIZE
@@ -84,6 +82,8 @@ char	*get_next_line(int fd)
 	char		*line;
 	char		*strr;
 
+	if (fd == -1)
+		return (free(buff), buff = NULL, NULL);
 	if (fd < 0 || BUFFER_SIZE <= 0 || (size_t)BUFFER_SIZE >= INT_MAX)
 		return (NULL);
 	strr = malloc(BUFFER_SIZE + 1);

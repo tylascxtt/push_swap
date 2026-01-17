@@ -3,7 +3,6 @@ BONUS_NAME = checker
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-BONUS_CFLAGS = -Wall -Wextra -Werror -I..
 
 SRCS = main.c mandatory/parsing.c \
        mandatory/listools.c mandatory/moves.c \
@@ -28,12 +27,12 @@ $(NAME): $(OBJS)
 bonus: $(BONUS_NAME)
 
 $(BONUS_NAME): $(BONUS_OBJS)
-	$(CC) $(BONUS_CFLAGS) $(BONUS_OBJS) -o $(BONUS_NAME)
+	$(CC) $(CFLAGS) $(BONUS_OBJS) -o $(BONUS_NAME)
 
-../bonus/%.o: ../bonus/%.c
-	$(CC) $(BONUS_CFLAGS) -c $< -o $@
+bonus/%.o: bonus/%.c bonus/checker.h
+	$(CC) $(CFLAGS) -c $< -o $@
 
-%.o: %.c
+%.o: %.c push_swap.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

@@ -6,7 +6,7 @@
 /*   By: mabenaya <mabenaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 19:38:02 by mabenaya          #+#    #+#             */
-/*   Updated: 2026/01/17 12:37:14 by mabenaya         ###   ########.fr       */
+/*   Updated: 2026/01/17 15:54:53 by mabenaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,16 @@ void	pushh(t_list **from, t_list **to)
 	*from = (*from)->next;
 	tmp->next = *to;
 	*to = tmp;
+}
+
+int	ft_strcmp(char *s1, char *s2)
+{
+	int	i;
+
+	i = 0;
+	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
+	{
+		i++;
+	}
+	return (s1[i] - s2[i]);
 }

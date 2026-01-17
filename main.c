@@ -6,7 +6,7 @@
 /*   By: mabenaya <mabenaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 16:13:29 by mabenaya          #+#    #+#             */
-/*   Updated: 2026/01/16 19:59:06 by mabenaya         ###   ########.fr       */
+/*   Updated: 2026/01/17 12:51:13 by mabenaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ int	main(int argc, char **argv)
 	sort_check(&stack_a, &stack_b);
 	if (stack_b)
 		ft_lstclear(&stack_b);
+	ft_lstclear(&stack_a);
 	return (0);
 }
