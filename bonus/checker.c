@@ -6,7 +6,7 @@
 /*   By: mabenaya <mabenaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 19:39:30 by mabenaya          #+#    #+#             */
-/*   Updated: 2026/01/16 20:42:58 by mabenaya         ###   ########.fr       */
+/*   Updated: 2026/01/17 12:32:34 by mabenaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,6 @@ int	main(int argc, char **argv)
 		return (0);
 	a = parse_args(argc, argv);
 	run_checker(a, ops);
+	ft_lstclear(&a);
 	return (0);
 }

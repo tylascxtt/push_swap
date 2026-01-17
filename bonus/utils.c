@@ -6,7 +6,7 @@
 /*   By: mabenaya <mabenaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 19:38:02 by mabenaya          #+#    #+#             */
-/*   Updated: 2026/01/16 20:10:53 by mabenaya         ###   ########.fr       */
+/*   Updated: 2026/01/17 12:37:14 by mabenaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,6 @@ void	rotatee(t_list **stack)
 	tmp->next = *stack;
 	(*stack) = (*stack)->next;
 	tmp->next->next = NULL;
-}
-
-void	rr_bonus(t_list **stack_a, t_list **stack_b)
-{
-	rotatee(stack_a);
-	rotatee(stack_b);
 }
 
 void	swapp(t_list **stack)
